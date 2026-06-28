@@ -1,10 +1,10 @@
-# 🏎️ Used Car Price Predictor
+#  Used Car Price Predictor
 
 This project implements a high-precision Machine Learning pipeline to estimate the market value of used Audi vehicles. By leveraging **Gradient Boosting (LightGBM)** and custom feature engineering, the model achieves a high degree of accuracy, explaining **~96%** of the price variance.
 
 
 
-## 📊 Performance Summary
+##  Performance Summary
 * **R² Score:** 0.9601
 * **MAE (Mean Absolute Error):** £1,135.90
 * **MAPE (Relative Error):** 7.16%
@@ -12,7 +12,7 @@ This project implements a high-precision Machine Learning pipeline to estimate t
 
 ---
 
-## 🛠️ The Pipeline
+##  The Pipeline
 The project utilizes a specialized dual-stream `ColumnTransformer` to handle different model requirements, ensuring maximum accuracy for tree-based architectures.
 
 ### 1. Feature Engineering
@@ -27,19 +27,19 @@ Created synthetic features to capture car wear and efficiency:
 
 ---
 
-## 🧠 Advanced Hyperparameter Tuning: Optuna
+##  Advanced Hyperparameter Tuning: Optuna
 
 I implemented **Optuna** for Bayesian optimization to intelligently search the hyperparameter space of the `LightGBM` model.
 
 
 
-### 🛠️ Optimization Strategy
+###  Optimization Strategy
 Instead of testing combinations randomly, Optuna builds a probability model to select new hyperparameters based on previous trial performance.
 
 * **Bayesian Search:** Focuses on promising regions of the parameter space by learning from previous iterations.
 * **Pruning:** Automatically terminates poorly performing trials early to focus resources on high-potential candidates.
 
-### 📈 Generalization Check
+###  Generalization Check
 The gap between training performance and test performance is a critical health indicator for any AI model.
 
 | Metric | Value |
@@ -52,7 +52,7 @@ The gap between training performance and test performance is a critical health i
 
 ---
 
-## 🚀 How to Use (Interactive Web App)
+##  How to Use (Interactive Web App)
 
 A **Streamlit** web application was developed for easy deployment and usage.
 
@@ -68,7 +68,7 @@ A **Streamlit** web application was developed for easy deployment and usage.
 
 
 ---
-## 🧰 Tech Stack
+##  Tech Stack
 - Python
 - Pandas & NumPy
 - Scikit-learn
@@ -78,7 +78,7 @@ A **Streamlit** web application was developed for easy deployment and usage.
 - Matplotlib
 ---
 
-## 🎯 Business Impact
+##  Business Impact
 
 This model can assist:
 - Dealerships in pricing inventory accurately
@@ -87,7 +87,7 @@ This model can assist:
 ---
 
 
-## 📂 Project Structure
+##  Project Structure
 * `data/`: Raw Audi dataset.
 * `app.py`: Streamlit application code.
 * `car_price_predictor_pipeline.pkl`: Saved model pipeline.
